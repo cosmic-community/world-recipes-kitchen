@@ -22,7 +22,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
               alt={recipe.title}
               width={300}
               height={200}
-              className="w-full h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-48 object-cover rounded-t-lg"
             />
           </div>
         )}

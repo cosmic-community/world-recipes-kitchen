@@ -11,16 +11,16 @@ export default function HeroSection({ homeData }: HeroSectionProps) {
   const heroImage = homeData?.metadata?.hero_image;
 
   return (
-    <section className="relative bg-gradient-to-r from-primary-600 to-primary-700 text-white py-20 overflow-hidden">
+    <section className="relative bg-black text-white py-20 overflow-hidden">
       {/* Background Image */}
       {heroImage && (
         <div className="absolute inset-0 z-0">
           <img
             src={`${heroImage.imgix_url}?w=2000&h=1200&fit=crop&auto=format,compress`}
             alt="Hero background"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-600/80 to-primary-700/80"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
       )}
       
@@ -30,19 +30,19 @@ export default function HeroSection({ homeData }: HeroSectionProps) {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
             {heroTitle}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-primary-100 drop-shadow-md">
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 drop-shadow-md">
             {heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/recipes"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors shadow-lg"
+              className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
             >
               Browse Recipes
             </Link>
             <Link
               href="#featured"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors backdrop-blur-sm"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors backdrop-blur-sm"
             >
               See Featured
             </Link>
