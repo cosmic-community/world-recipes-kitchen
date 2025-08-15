@@ -12,6 +12,23 @@ export interface CosmicObject {
   published_at?: string;
 }
 
+// Home page interface
+export interface HomePage extends CosmicObject {
+  type: 'home';
+  metadata: {
+    hero_title?: string;
+    hero_subtitle?: string;
+    hero_image?: {
+      url: string;
+      imgix_url: string;
+    };
+    featured_section_title?: string;
+    featured_section_description?: string;
+    categories_section_title?: string;
+    categories_section_description?: string;
+  };
+}
+
 // Recipe interface
 export interface Recipe extends CosmicObject {
   type: 'recipes';
@@ -75,6 +92,10 @@ export interface CosmicResponse<T> {
 }
 
 // Type guards for runtime validation
+export function isHomePage(obj: CosmicObject): obj is HomePage {
+  return obj.type === 'home';
+}
+
 export function isRecipe(obj: CosmicObject): obj is Recipe {
   return obj.type === 'recipes';
 }
