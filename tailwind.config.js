@@ -9,11 +9,11 @@ module.exports = {
       colors: {
         border: '#e2e8f0',
         primary: {
-          50: '#fef2f2',
-          100: '#fde8e8',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
         },
         secondary: {
           50: '#f8fafc',
